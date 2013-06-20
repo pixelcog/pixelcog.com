@@ -4,7 +4,7 @@ body {
 	margin: 0;
 	padding:50px;
 	font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	color:#777;
+	color:#555;
 	font-weight:300;
 }
 
@@ -34,13 +34,15 @@ h3, h4, h5, h6 {
 }
 
 a {
-	color:#7998af;
+	color:#91b6d2;
 	font-weight:400;
 	text-decoration:none;
 }
 
-a:hover {
-	color:#91b6d2;
+a:hover,
+a:active {
+	color:#5c83a0;
+	text-decoration: underline;
 }
 
 a small {
@@ -158,9 +160,11 @@ nav li:last-child a {
 	border-radius:0 5px 5px 0;
 }
 
-nav li a:hover {
+nav li a:hover,
+nav li a:active {
 	color:#444;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 nav li a:active,
@@ -172,9 +176,18 @@ nav li a.active:hover {
 /* Pagination */
 
 .pagination {
-	float: right;
+	*zoom: 1;
+}
+.pagination:before,
+.pagination:after {
+	display: table;
+	content: " ";
+}
+.pagination:after {
+	clear: both;
 }
 .pagination ul {
+	float: right;
 	display: inline-block;
 	list-style:none;
 	height:24px;
@@ -222,9 +235,11 @@ nav li a.active:hover {
 	width: 2.5em;
 }
 
-.pagination li a:hover {
+.pagination li a:hover,
+.pagination li a:active {
 	color:#444;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 .pagination li a:active,
@@ -232,6 +247,7 @@ nav li a.active:hover {
 .pagination li a.active:hover {
 	background: #f8f8f8;
 }
+
 
 /* Typography */
 
@@ -266,15 +282,25 @@ footer {
 	bottom:50px;
 }
 
-footer .avatar {
+img.avatar {
 	border-radius: 40px;
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
-	-o-border-radius: 40px;
-	-ms-border-radius: 40px;
-	-khtml-border-radius: 40px;
 	width:72px;
 	height:72px;
+}
+
+img.profile {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	width:100px;
+	height:100px;
+}
+
+img.pull-right {
+	float: right;
+	margin: 0 0 1em 1em;
 }
 
 @media print, screen and (max-width: 960px) {

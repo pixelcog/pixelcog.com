@@ -28,12 +28,17 @@
 				{{ content }}
 			</section>
 			<footer>
+{% if page.nobio != true %}
 				<img class="avatar" src="http://www.gravatar.com/avatar/33f90637d77f8d4da67faafd3af6597e?s=144" alt="Me" />
 				<p>PixelCog is the home of <a href="/about/">Mike Greiling</a>, freelance programmer, consultant, and entrepeneur.</p>
 				<p><a href="http://github.com/mikegreiling">github</a> | <a href="http://twitter.com/mikegreiling">twitter</a> | <a href="http://facebook.com/mike.greiling">facebook</a></p>
-				<p><small>Made with <a href="http://jekyllrb.com/">Jekyll</a> &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+{% endif %}
+				<p>
+					<small>© {{ 'now' | date: "%Y" }} PixelCog Inc.</small><br />
+					<small>Made with <a href="http://jekyllrb.com/">Jekyll</a> &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+				</p>
 			</footer>
 		</div>
-		<script src="js/scale.fix.js"></script>
+		<script src="/js/scale.fix.js"></script>
 	</body>
 </html>
