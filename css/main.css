@@ -108,7 +108,7 @@ header {
 	width:275px;
 	float:left;
 	position:fixed;
-	background: url('/img/bg-left.png') right repeat-y;
+	border-right: 1px solid #eee;
 	padding: 50px 30px 50px 0;
 	min-height: 100%;
 	margin: -50px 0;
@@ -131,19 +131,13 @@ nav ul {
 nav li {
 	float:left;
 	height:24px;
-	width:66px;
-	border-left:1px solid #fff;
-	border-right:1px solid #e5e5e5;
-}
-
-nav li:first-child {
-	border-left:none;
 	width:67px;
+	border-right:1px solid #e5e5e5;
 }
 
 nav li:last-child {
 	border-right:none;
-	width:67px;
+	width:68px;
 }
 
 nav li a {
@@ -175,6 +169,72 @@ nav li a.active:hover {
 	background: #f8f8f8;
 }
 
+/* Pagination */
+
+.pagination {
+	float: right;
+}
+.pagination ul {
+	display: inline-block;
+	list-style:none;
+	height:24px;
+	padding:0;
+	background: #fff;
+	border-radius:5px;
+	border:1px solid #e5e5e5;
+}
+
+.pagination li {
+	float:left;
+	height:24px;
+	border-right:1px solid #e5e5e5;
+}
+
+.pagination li:last-child {
+	border-right:none;
+}
+
+.pagination li a {
+	font-size:11px;
+	color:#999;
+	display:block;
+	text-align:center;
+	line-height:24px;
+	height:24px;
+	font-size:13px;
+	padding: 0 8px;
+	width: 1em;
+}
+
+.pagination li:first-child a {
+	border-radius:5px 0 0 5px;
+}
+
+.pagination li:last-child a {
+	border-radius:0 5px 5px 0;
+}
+
+.pagination li.prev a {
+	width: 4em;
+}
+
+.pagination li.next a {
+	width: 2.5em;
+}
+
+.pagination li a:hover {
+	color:#444;
+	font-weight: bold;
+}
+
+.pagination li a:active,
+.pagination li a.active,
+.pagination li a.active:hover {
+	background: #f8f8f8;
+}
+
+/* Typography */
+
 strong {
 	color:#222;
 	font-weight:700;
@@ -199,6 +259,7 @@ hr {
 }
 
 footer {
+	text-align: center;
 	width:275px;
 	float:left;
 	position:fixed;
@@ -234,6 +295,7 @@ footer .avatar {
 		padding:0 320px 10px 0;
 		margin: 0;
 		min-height: 0;
+		border: none;
 	}
 	
 	section {
