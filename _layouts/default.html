@@ -1,13 +1,14 @@
-<!doctype html>
+{% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}<!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<title>PixelCog | {{ page.title }}</title>
 		
-		<link rel="stylesheet" href="/css/main.css">
-		<link rel="stylesheet" href="/css/syntax.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="canonical" href="{{ page.url }}" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/syntax.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -16,16 +17,20 @@
 		<div class="wrapper">
 			<header>
 				<h1><a href="/"><img src="/img/pixelcog-logo.png" alt="{{ site.name }}" width="300" /></a></h1>
-				<p>Web Programming Services.</p>
-				<p class="view"><a href="http://twitter.com/pixelcog">Follow us on Twitter <small>twitter.com/pixelcog</small></a></p>
+				<nav><ul>
+					<li><a {% if location == 'about' %}class="active" {% endif %}href="/about/">About</a></li>
+					<li><a {% if location == 'projects' %}class="active" {% endif %}href="/projects/">Projects</a></li>
+					<li><a {% if location == 'blog' %}class="active" {% endif %}href="/blog/">Blog</a></li>
+					<li><a {% if location == 'contact' %}class="active" {% endif %}href="/contact/">Contact</a></li>
+				</ul></nav>
 			</header>
 			<section>
 				{{ content }}
 			</section>
 			<footer>
-				<img class="avatar" src="http://www.gravatar.com/avatar/33f90637d77f8d4da67faafd3af6597e?s=160" alt="Avatar">
-				<p>PixelCog is the home of <a href="http://github.com/mikegreiling">Mike Greiling</a>, freelance programmer, consultant, and entrepeneur.</p>
-				<p><a href="http://twitter.com/mikegreiling">twitter</a> | <a href="http://facebook.com/mike.greiling">facebook</a></p>
+				<img class="avatar" src="http://www.gravatar.com/avatar/33f90637d77f8d4da67faafd3af6597e?s=144" alt="Me" />
+				<p>PixelCog is the home of <a href="/about/">Mike Greiling</a>, freelance programmer, consultant, and entrepeneur.</p>
+				<p><a href="http://github.com/mikegreiling">github</a> | <a href="http://twitter.com/mikegreiling">twitter</a> | <a href="http://facebook.com/mike.greiling">facebook</a></p>
 				<p><small>Made with <a href="http://jekyllrb.com/">Jekyll</a> &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
 			</footer>
 		</div>
