@@ -1,12 +1,10 @@
 ---
 permalink: /contact/
-layout:    default
+layout:    contact
 title:     Contact Us
-weight:    1
 ---
 
 # Contact Us
+------------
 
-This is the **Contact** page...
-
-The canonical url is `{{page.url}}`.
+You can use the following contact form to send us an email, or you can message us on [twitter](http://twitter.com/pixelcog) or [facebook](http://facebook.com/pixelcog).
