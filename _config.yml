@@ -9,3 +9,5 @@ safe:     true
 pygments: false
 markdown: 'maruku'
 timezone: 'America/Chicago'
+
+excerpt_separator: '<!-- more -->'

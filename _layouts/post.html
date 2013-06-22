@@ -1,9 +1,20 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
+{% capture readtime %}{{ page.content | number_of_words | divided_by:200 | plus:1 }}{% endcapture %}
 
-<div id="post">
+<h1 class="post-title">{{ page.title }}</h1>
+<p class="post-meta">{{ page.date | date_to_string }} &bull; {% if readtime == '1' %} &lt;{% endif %}{{ readtime }} min. read</p>
+
+{% if page.image %}
+	<div class="post-banner" style="background-image: url(/img/posts/{{ page.image }});">
+		<img src="/img/posts/{{ page.image }}" alt="{{ page.title }}" />
+	</div>
+{% else %}
+	<div class="post-banner no-image">
+		<img src="/img/posts/no-image.gif" alt="{{ page.title }}" />
+	</div>
+{% endif %}
+
 {{ content }}
-</div>
+
