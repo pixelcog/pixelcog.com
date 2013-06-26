@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-		<title>PixelCog | {{ page.title }}</title>
+		<title>{% if page.title %}{{ page.title }}{% else %}PixelCog{% endif %}</title>
 		
 		<link rel="canonical" href="{{ page.url }}" />
 		<link rel="stylesheet" href="/css/main.css" />
