@@ -93,6 +93,7 @@ section {
 	float:right;
 	padding-bottom:50px;
 	min-height: 400px;
+	overflow: hidden;
 }
 
 small {
@@ -114,17 +115,23 @@ blockquote {
 }
 
 code, pre {
-	font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
-	color:#333;
-	font-size:12px;
+	font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
+	color: #333;
+	font-size: 13px;
+	background: #f8f8f8;
+	border-radius: 5px;
+	border: 1px solid #e5e5e5;
+	padding: 2px 4px;
 }
 
 pre {
-	padding:8px 15px;
-	background: #f8f8f8;	
-	border-radius:5px;
-	border:1px solid #e5e5e5;
+	padding: 8px 15px;
 	overflow-x: auto;
+}
+pre > code {
+	background: transparent;
+	border: none;
+	padding: 0;
 }
 
 table {
@@ -446,7 +453,7 @@ img.pull-right {
 		text-align: center;
 	}
 	
-	pre, code {
+	pre, pre > code {
 		word-wrap:normal;
 	}
 }
