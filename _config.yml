@@ -10,4 +10,4 @@ pygments: false
 markdown: 'maruku'
 timezone: 'America/Chicago'
 
-excerpt_separator: '<!-- more -->'
+excerpt_separator: "\n\n"
