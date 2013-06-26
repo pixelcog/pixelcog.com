@@ -308,7 +308,7 @@ nav li a.active:hover {
 
 .post-banner {
 	display: block;
-	background: #000 url('/img/posts/no-image.gif') center;
+	background: #000 url('/img/post-banners/no-image.gif') center;
 	background-size: auto 100%;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;

@@ -13,12 +13,12 @@ include:   blog.md
 	<p class="post-meta">{{ post.date | date_to_string }} &bull; {% if readtime == '1' %} &lt;{% endif %}{{ readtime }} min. read</p>
 
 	{% if post.image %}
-	<a href="{{ post.url }}" class="post-banner" style="background-image: url(/img/posts/{{ post.image }});">
-		<img src="/img/posts/{{ post.image }}" alt="{{ post.title }}" />
+	<a href="{{ post.url }}" class="post-banner" style="background-image: url(/img/post-banners/{{ post.image }});">
+		<img src="/img/post-banners/{{ post.image }}" alt="{{ post.title }}" />
 	</a>
 	{% else %}
 	<a href="{{ post.url }}" class="post-banner no-image">
-		<img src="/img/posts/no-image.gif" alt="{{ post.title }}" />
+		<img src="/img/post-banners/no-image.gif" alt="{{ post.title }}" />
 	</a>
 	{% endif %}
 	
