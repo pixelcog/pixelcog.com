@@ -1,3 +1,7 @@
+name:   'PixelCog Blog'
+url:    'http://pixelcog.com'
+author: 'Mike Greiling'
+
 include:  ['_pages']
 
 paginate:      10
@@ -5,9 +9,9 @@ paginate_path: '/blog/page:num/'
 permalink:     '/blog/:year/:title/'
 relative_permalinks: false
 
+excerpt_separator: "\n\n"
+
 safe:     true
 pygments: false
 markdown: 'maruku'
 timezone: 'America/Chicago'
-
-excerpt_separator: "\n\n"
