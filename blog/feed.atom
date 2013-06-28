@@ -18,7 +18,7 @@
 		<published>{{ post.date | date_to_xmlschema }}</published>
 		<updated>{% if post.updated == null %}{{ post.date | date_to_xmlschema }}{% else %}{{ post.updated | append: '@12am' | date_to_xmlschema }}{% endif %}</updated>
 		<summary type="html">{{ post.excerpt | strip_html | xml_escape }}</summary>
-		<content type="html">{{ post.content | xml_escape }}</content>
+		<content type="html">{{ post.content | replace: "<h1 id='table_of_contents'>Table of Contents</h1>", "<strong>Table of Contents:</strong>" | replace: "<ul style='list-style: none;'>", "<ul>" | xml_escape }}</content>
 	</entry>
 {% endfor %}
 </feed>
