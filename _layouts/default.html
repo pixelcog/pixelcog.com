@@ -14,7 +14,7 @@
 		<![endif]-->
 	</head>
 	<body>
-		<div class="wrapper">
+		<div class="wrapper{% if location == '' %} home{% endif %}">
 			<header>
 				<h1><a href="/"><img src="/img/pixelcog-logo.png" alt="{{ site.name }}" width="300" /></a></h1>
 				<nav><ul>
@@ -28,8 +28,9 @@
 				{{ content }}
 			</section>
 			<footer>
-{% if page.nobio != true %}
+{% if page.nobio != true %}{% if location != '' %}
 				<img class="avatar" src="http://www.gravatar.com/avatar/33f90637d77f8d4da67faafd3af6597e?s=144" alt="Me" />
+{% endif %}
 				<p>PixelCog is the home of <a href="/about/">Mike Greiling</a>, freelance programmer, consultant, and entrepeneur.</p>
 				<p><a href="http://github.com/mikegreiling">github</a> | <a href="http://twitter.com/mikegreiling">twitter</a> | <a href="http://facebook.com/mike.greiling">facebook</a></p>
 {% endif %}

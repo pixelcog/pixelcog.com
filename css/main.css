@@ -496,6 +496,47 @@ img.pull-right {
 	}
 }
 
+/* Home Page Styling */
+
+div.wrapper.home {
+	width: auto;
+	margin: 0;
+}
+
+div.home header,
+div.home section,
+div.home footer {
+	float: none;
+	width: auto;
+	position: static;
+	text-align: center;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+div.home header {
+	background: none;
+	padding: 0;
+	margin-bottom: 2em;
+	min-height: 0;
+	border: none;
+	text-align: center;
+}
+
+div.home header ul {
+	position: static;
+	margin: 0 auto;
+}
+
+div.home section {
+	border: none;
+	padding: 0;
+	min-height: 0;
+}
+
+div.home footer {
+	max-width: 300px;
+}
 
 /* jotForm Styling */
 
