@@ -46,10 +46,20 @@
 			_gaq.push(['_setAccount', 'UA-20587204-1']);
 			_gaq.push(['_trackPageview']);
 			
+			var disqus_shortname  = 'pixelcog',
+			    disqus_identifier = '{{ page.path | split:'/' | last | cgi_escape }}',
+			    disqus_url        = '{{ site.url }}{{ page.url | uri_escape }}'
+			;
 			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				var load = function(src){
+					var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = src;
+					var e = document.getElementsByTagName('script')[0]; e.parentNode.insertBefore(s, e);
+				};
+				load(('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js');
+				load('//' + disqus_shortname + '.disqus.com/count.js');
+				if (document.getElementById('disqus_thread')) {
+					load('//' + disqus_shortname + '.disqus.com/embed.js');
+				}
 			})();
 		</script>
 	</body>

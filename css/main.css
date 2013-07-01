@@ -332,9 +332,14 @@ nav li a.active:hover {
 .post-title {
 	margin-bottom: 0;
 }
-.post-meta {
+.post-meta,
+.post-meta a {
 	color: #aaa;
 	margin-bottom: 0;
+},
+.post-meta a:hover,
+.post-meta a:active {
+	text-decoration: underline;
 }
 
 .post-banner {

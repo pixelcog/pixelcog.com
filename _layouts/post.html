@@ -4,7 +4,11 @@ layout: default
 {% capture readtime %}{{ page.content | number_of_words | divided_by:180 | plus:1 }}{% endcapture %}
 
 <h1 class="post-title">{{ page.title }}</h1>
-<p class="post-meta">{{ page.date | date_to_string }} &bull; {% if readtime == '1' %} &lt;{% endif %}{{ readtime }} min. read</p>
+<p class="post-meta">
+	{{ page.date | date_to_string }} &bull;
+	{% if readtime == '1' %} &lt;{% endif %}{{ readtime }} min. read &bull;
+	<a href="#disqus_thread" data-disqus-identifier="{{ page.path | split:'/' | last | cgi_escape }}">Comments</a>
+</p>
 
 {% if page.image %}
 	<div class="post-banner" style="background-image: url(/img/post-banners/{{ page.image }});">
@@ -18,3 +22,9 @@ layout: default
 
 {% comment %}This h1 tag is a workaround for maruku's wacky Table of Contents generator requirements.{% endcomment %}
 {{ content | replace: "<h1 id='table_of_contents'>Table of Contents</h1>", "<strong>Table of Contents:</strong>" | replace: "<ul style='list-style: none;'>", "<ul>" }}
+
+<hr />
+
+{% if post.comments != false %}
+<div id="disqus_thread"></div>
+{% endif %}
