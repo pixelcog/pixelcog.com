@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
-{% capture readtime %}{{ page.content | number_of_words | divided_by:180 | plus:1 }}{% endcapture %}
+{% capture readtime %}{{ page.content | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}
 
 <h1 class="post-title">{{ page.title }}</h1>
 <p class="post-meta">
 	{{ page.date | date_to_string }} &bull;
-	{% if readtime == '1' %} &lt;{% endif %}{{ readtime }} min. read &bull;
+	{% if readtime == '0' %} &lt; 1{% else %}{{ readtime }}{% endif %} min. read &bull;
 	<a href="#disqus_thread" data-disqus-identifier="{{ page.path | split:'/' | last | cgi_escape }}">Comments</a>
 </p>
 

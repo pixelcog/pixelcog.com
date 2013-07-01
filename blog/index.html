@@ -7,11 +7,11 @@ include:   blog.md
 {% include content.md %}
 
 <div class="articles">
-{% for post in paginator.posts %}{% capture readtime %}{{ post.content | number_of_words | divided_by:180 | plus:1 }}{% endcapture %}
+{% for post in paginator.posts %}{% capture readtime %}{{ post.content | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}
 	<h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	<p class="post-meta">
 		{{ post.date | date_to_string }} &bull;
-		{% if readtime == '1' %} &lt;{% endif %}{{ readtime }} min. read &bull;
+		{% if readtime == '0' %} &lt; 1{% else %}{{ readtime }}{% endif %} min. read &bull;
 		<a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.path | split:'/' | last | cgi_escape }}">Comments</a>
 	</p>
 
