@@ -1,10 +1,10 @@
 ---
 layout:    default
 title:     Blog
-include:   blog.md
 ---
 
-{% include content.md %}
+<h1>PixelCog Blog</h1>
+<hr />
 
 <div class="articles">
 {% for post in paginator.posts %}{% capture readtime %}{{ post.content | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}
