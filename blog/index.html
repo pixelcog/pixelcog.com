@@ -25,7 +25,7 @@ title:     Blog
 	</a>
 	{% endif %}
 	
-	<p class="post-excerpt">{{ post.excerpt | strip_html }}&hellip; (<a href="{{ post.url }}">Read More</a>)</p>
+	<p class="post-excerpt">{{ post.excerpt | strip_html }} [<a href="{{ post.url }}">read more</a>]</p>
 	
 {% endfor %}
 </div>
