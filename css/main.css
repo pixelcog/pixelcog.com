@@ -14,6 +14,15 @@ body {
 .wrapper {
 	width:950px;
 	margin:0 auto;
+	*zoom: 1;
+}
+.wrapper:before,
+.wrapper:after {
+	display: table;
+	content: " ";
+}
+.wrapper:after {
+	clear: both;
 }
 
 img {
