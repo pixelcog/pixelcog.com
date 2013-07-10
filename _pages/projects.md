@@ -9,7 +9,7 @@ title:     Current Projects
 
 Here's a quick glimpse into the projects we're currently involved with.
 
-## ArkOwl Fraud Detection
+## ArkOwl Online Fraud Detection
 
 [![ArkOwl Logo](/img/projects/arkowl.jpg)](http://www.arkowl.com/){: .post-banner style='background-image: url(/img/projects/arkowl.jpg);'}
 
