@@ -345,6 +345,7 @@ nav li a.active:hover {
 .post-meta a {
 	color: #aaa;
 	margin-bottom: 0;
+	white-space: nowrap;
 },
 .post-meta a:hover,
 .post-meta a:active {
@@ -499,6 +500,9 @@ img.pull-right {
 @media print, screen and (max-width: 480px) {
 	body {
 		padding:15px;
+	}
+	.post-meta {
+		font-size: 15px;
 	}
 }
 
