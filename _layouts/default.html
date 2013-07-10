@@ -6,6 +6,9 @@
 		<title>{% if page.title %}{{ page.title }}{% else %}PixelCog{% endif %}</title>
 		
 		<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+{% if page.blogfeed %}
+		<link rel="alternate" type="application/atom+xml" title="{{ site.name }} — Feed" href="{{ site.url }}/blog/feed.atom" />
+{% endif %}
 		<link rel="stylesheet" href="/css/main.css" />
 		<link rel="stylesheet" href="/css/syntax.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
