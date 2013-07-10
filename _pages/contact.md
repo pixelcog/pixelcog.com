@@ -1,7 +1,7 @@
 ---
 permalink: /contact/
 layout:    contact
-title:     Contact Us
+title:     Contact PixelCog
 ---
 
 # Contact Us

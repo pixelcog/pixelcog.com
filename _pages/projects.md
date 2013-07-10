@@ -1,7 +1,7 @@
 ---
 permalink: /projects/
 layout:    default
-title:     Current Projects
+title:     PixelCog's Current Projects
 ---
 
 # Current Projects
