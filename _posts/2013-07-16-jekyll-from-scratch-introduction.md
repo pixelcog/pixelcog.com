@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  Jekyll From Scratch - Getting Started
-tags:   jekyll
-image:  jekyll-pt1-intro.gif
+layout:  post
+title:   Jekyll From Scratch - Getting Started
+tags:    jekyll
+image:   jekyll-pt1-intro.gif
+updated: 2013-07-17 @ 11:17pm
 ---
 
 [Jekyll](http://jekyllrb.com/) + [GitHub Pages](http://pages.github.com/) is the web platform underlying the new and improved PixelCog.com. I've decided to document my experience with it as I go along, consolidating best practices, tips, and tricks into a helpful guide to use for my own reference and the benefit of anyone else out there who might learn from my experience.
@@ -58,11 +59,11 @@ I suspect many of the remaining plugin-based workarounds will also be made obsol
 
 ## Getting Started
 
-Getting your feet wet with Jekyll is very simple. I find it best to force installation of the same versions of Liquid and Jekyll [currently used on GitHub Pages](https://help.github.com/articles/using-jekyll-with-pages#troubleshooting) to ensure feature parity (*2.5.0* and *1.0.2* respectively as of June 2013). Assuming you already have [ruby installed](http://www.ruby-lang.org/en/downloads/), following Jekyll's [Quick-Start Guide](http://jekyllrb.com/docs/quickstart/) is as simple as this:
+Getting your feet wet with Jekyll is very simple. I find it best to force installation of the same versions of Jekyll and Liquid [currently used on GitHub Pages](https://help.github.com/articles/using-jekyll-with-pages#troubleshooting) to ensure feature parity (*1.0.3* and *2.5.0* respectively as of July 2013). Assuming you already have [ruby installed](http://www.ruby-lang.org/en/downloads/), following Jekyll's [Quick-Start Guide](http://jekyllrb.com/docs/quickstart/) is as simple as this:
 
 	$ gem update --system
 	$ gem install liquid -v 2.5.0
-	$ gem install jekyll -v 1.0.2
+	$ gem install jekyll -v 1.0.3
 	$ jekyll new blog
 	$ cd blog
 	$ jekyll serve -w
