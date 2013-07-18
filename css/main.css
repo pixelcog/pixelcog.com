@@ -412,8 +412,15 @@ img.profile {
 }
 
 img.pull-right {
+	max-width: 40%;
 	float: right;
 	margin: 0 0 1em 1em;
+}
+
+img.pull-left {
+	max-width: 40%;
+	float: right;
+	margin: 0 1em 1em 0;
 }
 
 
