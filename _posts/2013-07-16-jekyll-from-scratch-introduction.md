@@ -158,6 +158,8 @@ _* replace mydomain.com with your domain name_
 
 Wait for the DNS zone changes to propogate (up to 48 hours, but usually much sooner), and enjoy!
 
+{% endraw %}
+
 ### Other Deployment Options
 
 GitHub Pages may be my deployment option of choice, but it certainly isn't the only option. As mentioned before, Amazon S3 is another good, low-cost solution. This and many other options and deployment automation techniques can be found on [Jekyll's official website](http://jekyllrb.com/docs/deployment-methods/).
@@ -166,7 +168,7 @@ GitHub Pages may be my deployment option of choice, but it certainly isn't the o
 
 Jekyll has built support for importing blog data from a large number of blogging platforms including Tumblr, WordPress, Blogger, and many others. Visit [Jekyll's migration page](http://jekyllrb.com/docs/migrations/) for more info.
 
-In my next post, I'll cover ways to maintain urls you were using from your old blog so you don't break all of your inbound links.
+In my [next post]({% post_url 2013-07-18-jekyll-from-scratch-core-architecture %}), I'll cover ways to maintain urls you were using from your old blog so you don't break all of your inbound links.
 
 ## Helpful Resources
 
@@ -182,8 +184,6 @@ In my next post, I'll cover ways to maintain urls you were using from your old b
 - [Tobias Sjösten's Blog](http://vvv.tobiassjosten.net/jekyll/) — has some nice tips and tricks for Jekyll, also plugin-free.
 - [StackOverflow's Jekyll Tag](http://stackoverflow.com/questions/tagged/jekyll) — the place to go to ask questions if you get hung up.
 
-{% endraw %}
-
 ## Final Thoughts
 
 One of the biggest boons for budding young web developers in the last few decades has been the ability to hit "view source" to instantly see what's behind the curtain of their favorite website. For a kid who begged his parents for [triangle shaped screwdrivers](https://en.wikipedia.org/wiki/List_of_screw_drives#TA) so that he could dissect his McDonalds toys and put them back together, I found this feature invaluable when I first cut my teeth on HTML in my early teens. It's always easier to learn by observing real-life examples.
@@ -192,4 +192,4 @@ This is one reason why Jekyll's pairing with GitHub Pages is so awesome. Many of
 
 Go forth and start [blogging like a hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html)!
 
-In my next post I'll be covering some more advanced website structural configuration with Jekyll.
+In my [next post]({% post_url 2013-07-18-jekyll-from-scratch-core-architecture %}) I'll be covering some more advanced website structural configuration with Jekyll.
