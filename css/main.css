@@ -122,6 +122,9 @@ blockquote {
 	font-style:italic;
 }
 
+#table_of_contents {
+	margin-bottom: 0;
+}
 .maruku_toc {
 	font-size: 0.9em;
 	*zoom: 1;
