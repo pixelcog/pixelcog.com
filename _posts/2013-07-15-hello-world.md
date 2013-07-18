@@ -7,7 +7,7 @@ image:  hello-world.gif
 
 Welcome to my new tech blog!
 
-Following [Lorna Jane Mitchell's advice](http://www.lornajane.net/posts/2011/make-blogging-your-new-years-resolution) I made blogging into a new year's resolution... two and a half years ago. I've long since convinced myself of the benefits of this practice; writing for mental relief, personal reference, publicity, etc. I've just never made the time to dive in until now. I'm excited to finally get started.
+Following [Lorna Jane Mitchell's advice](http://www.lornajane.net/posts/2011/make-blogging-your-new-years-resolution) I made blogging into a new year's resolution... two and a half years ago. Two full new-years later, I've long since convinced myself of the benefits of this practice; writing for mental relief, personal reference, publicity, etc. I've just never made the time to dive in until now. I'm excited to finally get started.
 
 {{ more }}
 
