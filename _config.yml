@@ -9,7 +9,7 @@ paginate_path: '/blog/page:num/'
 permalink:     '/blog/:year/:title/'
 relative_permalinks: false
 
-excerpt_separator: "\n\n"
+excerpt_separator: "{{ more }}"
 
 safe:     true
 pygments: false
