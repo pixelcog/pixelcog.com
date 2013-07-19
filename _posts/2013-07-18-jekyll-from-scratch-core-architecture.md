@@ -303,6 +303,8 @@ Once you've added your atom feed, don't forget to include a line in your blog te
 
 	<link rel="alternate" type="application/atom+xml" title="{{ site.name }} — Feed" href="{{ site.url }}/blog/feed.atom" />
 
+{% endraw %}
+
 ### Tags and Categories
 
 Tags and categories are two special front-matter attributes available to blog posts, and they function practically the same. Any post can be associated with any number of tags or any number of categories through a simple YAML declaration:
@@ -320,7 +322,7 @@ Unfortunately, there is no way _([yet](https://github.com/mojombo/jekyll/pull/87
 
 Lastly, there isn't currently a way to implement pagination on tag or category indexes without resorting to manual page generation or plugins. I am not currently using tags on this blog as this is only my third posting and a tag archive wouldn't be especially useful yet, but I will explore this a bit more as my blog matures.
 
-One [interesting solution](http://alexpearce.me/2012/04/simple-jekyll-searching/) I've seen is to list tags through a "search" landing page by sniffing out a query parameter, utilizing a Jekyll-generated `search.json` file and some javascript. More on search in the next blog post.
+One [interesting solution](http://alexpearce.me/2012/04/simple-jekyll-searching/) I've seen is to list tags through a "search" landing page by sniffing out a query parameter, utilizing a Jekyll-generated `search.json` file and some javascript. More on search in the [next blog post]({% post_url 2013-07-19-jekyll-from-scratch-extending-jekyll %}#interactive_search).
 
 ### More Tips and Tricks
 
@@ -342,6 +344,5 @@ I'm not a big fan of tag clouds myself, but it is definitely possible to [create
 
 In this post I've identified virtually everything one might need to structure their static website with Jekyll. If you have any additional tips or examples to share, please comment or drop me a note and I'll try to include them here.
 
-In my next post, I'll identify ways in which you can extend Jekyll further with interactive elements, integration with third party tools, and a few other neat tricks.
+In my [next post]({% post_url 2013-07-19-jekyll-from-scratch-extending-jekyll %}), I'll identify ways in which you can extend Jekyll further with interactive elements, integration with third party tools, and a few other neat tricks.
 
-{% endraw %}
