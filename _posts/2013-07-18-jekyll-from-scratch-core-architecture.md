@@ -5,7 +5,7 @@ tags:   jekyll
 image:  jekyll-pt2-core-architecture.gif
 ---
 
-Now that we've covered the [basics of Jekyll as a blogging platform](/blog/2013/jekyll-from-scratch-introduction/), it's time to mold a richly customized website out of the hunk of clay Jekyll has given you. In this second post of my series, I explore the depths of Jekyll's potential as a static website generator without using any plugins.
+Now that we've covered the [basics of Jekyll as a blogging platform]({% post_url 2013-07-16-jekyll-from-scratch-introduction %}), it's time to mold a richly customized website out of the hunk of clay Jekyll has given you. In this second post of my series, I explore the depths of Jekyll's potential as a static website generator without using any plugins.
 
 {{ more }}{% raw %}
 

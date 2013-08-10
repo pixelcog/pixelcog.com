@@ -5,7 +5,7 @@ tags:   jekyll
 image:  jekyll-pt3-extending-jekyll.gif
 ---
 
-In my previous posts I've covered [the basics of Jekyll](/blog/2013/jekyll-from-scratch-introduction/), and [building a static website framework](/blog/2013/jekyll-from-scratch-core-architecture/) from the ground up. In this post, I'll demonstrate ways in which you can enhance your otherwise-static Jekyll website or blog with interactive components like comment threads, site search, and contact forms, and I'll share a few additional tips and tricks I've run into as well.
+In my previous posts I've covered [the basics of Jekyll]({% post_url 2013-07-16-jekyll-from-scratch-introduction %}), and [building a static website framework]({% post_url 2013-07-18-jekyll-from-scratch-core-architecture %}) from the ground up. In this post, I'll demonstrate ways in which you can enhance your otherwise-static Jekyll website or blog with interactive components like comment threads, site search, and contact forms, and I'll share a few additional tips and tricks I've run into as well.
 
 {{ more }}
 
