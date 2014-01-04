@@ -22,7 +22,7 @@ blogfeed: true
 {% endif %}
 
 {% comment %}This h1 tag is a workaround for maruku's wacky Table of Contents generator requirements.{% endcomment %}
-{{ content | replace: "<h1 id='table_of_contents'>Table of Contents</h1>", "<h4 id='table_of_contents'>Table of Contents:</h4>" | replace: "<ul style='list-style: none;'>", "<ul>" }}
+{{ content | replace: "#---", "---" | replace: "<h1 id='table_of_contents'>Table of Contents</h1>", "<h4 id='table_of_contents'>Table of Contents:</h4>" | replace: "<ul style='list-style: none;'>", "<ul>" }}
 
 <hr />
 

@@ -129,8 +129,8 @@ I also removed the inline styling on the list it generates because I prefer to u
 
 As demonstrated by [Development Seed](http://developmentseed.org/blog/2011/09/09/jekyll-github-pages/) and others, you can utilize liquid `{% raw %}{% include file.ext %}{% endraw %}` tags to consolidate static assets for your site. Say you have a handful of javascript or css files which are included on each page. Simply move them to the `_includes` folder and create one consolidated file like so:
 {% raw %}
-	---
-	---
+	#---
+	#---
 	{% include file1.css %}
 	{% include file2.css %}
 	...

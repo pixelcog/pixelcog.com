@@ -77,20 +77,20 @@ Now simply go to `localhost:4000` and marvel at your creation...
 
 Looking at the shell directory structure that we just created you'll notice a `_posts` subdirectory.  This is where your published blog posts will live. These must all follow the naming convention `YYYY-MM-DD-name-of-post.ext`. The example post uses the extension `*.markdown` but I much prefer the sussinct `*.md` extension; it makes no difference either way. Jekyll will infer the date and permalink slug of your post from this name unless overridden in the [YAML front-matter](http://jekyllrb.com/docs/frontmatter/) (the content between the lines with three dashes at the start of the file):
 
-	---
+	#---
 	layout: post
 	title:  "Welcome to Jekyll!"
 	date:   2013-05-24 18:34:38
 	categories: jekyll update
-	---
+	#---
 	
 	You'll find this post [...]
 
 Beginning with the recent release of Jekyll 1.0, we can now create and preview blog post [drafts](https://gist.github.com/benbalter/5555992) without mixing them in with published posts and conforming to this rigid file naming convention. Simply create a `_drafts` folder in the root directory of your blog and add a new file to it. Let's call it `hello-world.md`:
 
-	---
+	#---
 	layout: post
-	---
+	#---
 	
 	# Hello World
 	This is my first _ever_ Jekyll post!

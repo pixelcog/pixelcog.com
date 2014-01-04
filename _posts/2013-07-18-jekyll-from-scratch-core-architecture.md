@@ -55,19 +55,19 @@ Then I created files for each of my pages in the `_pages` directory with front-m
 
 **"\_pages/home.md"**:
 
-	---
+	#---
 	permalink: /
 	layout:    default
 	title:     Home
-	---
+	#---
 
 **"\_pages/about.md"**:
 
-	---
+	#---
 	permalink: /about/
 	layout:    default
 	title:     About Us
-	---
+	#---
 
 Once my site is fully built out, I'll be able to do the majority of my routine edits and updates by simply modifying markdown files in `_pages` and `_posts`, only accessing the others when I decide to make structural or cosmetic changes to the site.
 
@@ -95,11 +95,11 @@ I've created the following file in `/_layouts/redirect.html` (partly borrowed fr
 
 Now `/blog/2013.html` contains the following:
 
-	---
+	#---
 	permalink: /blog/2013/
 	redirect:  /blog/
 	layout:    redirect
-	---
+	#---
 
 All you need is the front-matter – just five lines and you're done.
 
@@ -171,8 +171,8 @@ The `{% comment %}` tags are there only to prevent the generated file from havin
 
 **[Robots.txt](http://en.wikipedia.org/wiki/Robots_exclusion_standard)** as you probably are aware is a simple file used to blacklist urls for search engine spiders and other bots. In this sense it serves the opposite function of a sitemap. It also can be used to tell spiders where to find your sitemap. Here is my implementation:
 
-	---
-	---
+	#---
+	#---
 	User-agent: * 
 	{% for node in site.pages %}{% if node.noindex %}{% assign isset = true %}Disallow: {{ node.url }}
 	{% endif %}{% endfor %}{% if isset != true %}Disallow:
@@ -185,20 +185,20 @@ Both of these implementations require the `url` value to be defined within `_con
 
 You may have noticed I've also introduced two new optional front-matter variables: `updated` and `noindex`. These can be used like so:
 
-	---
+	#---
 	permalink: /contact/thankyou/
 	layout:    default
 	title:     Thank You
 	noindex:   true
-	---
+	#---
 
 Doing this will add `/contact/thankyou/` to my "Disallow" list in `robots.txt` and remove it from `sitemap.xml` entirely.
 
-	---
+	#---
 	layout:  post
 	title:   Hello World
 	updated: 2013-06-22
-	---
+	#---
 
 Doing this will change the `lastmod` timestamp of the post in `sitemap.xml` (and later we'll use this in our rss/atom feed as well).
 
@@ -270,8 +270,8 @@ Having had no real experience generating RSS or Atom documents before, I decided
 
 Here's my implementation:
 
-	---
-	---
+	#---
+	#---
 	<?xml version="1.0" encoding="UTF-8"?>
 	<feed xmlns="http://www.w3.org/2005/Atom">
 		<title>{{ site.name | xml_escape }}</title>
@@ -309,12 +309,12 @@ Once you've added your atom feed, don't forget to include a line in your blog te
 
 Tags and categories are two special front-matter attributes available to blog posts, and they function practically the same. Any post can be associated with any number of tags or any number of categories through a simple YAML declaration:
 
-	---
+	#---
 	layout: post
 	title:  "My Awesome Blog Post"
 	category: blog
 	tags: blog blogging awesomeness
-	---
+	#---
 
 Where these become useful is in their corresponding global `site` variables. You can loop over all of the categories used in your blog with `site.categories`, and loop over all of your tags with `site.tags`. In addition, you can loop over all of the posts in a given category with `site.categories[CATEGORY]` or all of the posts with a given tag using `site.tags[TAG]`. These can be used to construct category-specific indexes, or archive pages featuring every post with a given tag.
 
