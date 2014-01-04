@@ -115,7 +115,7 @@ Note that GitHub's [official documentation](https://help.github.com/articles/cus
 
 You'll note that for all of these "pretty" urls, a trailing `/` is needed.  This is to force Jekyll to render them at `/url/index.html` rather than simply `/url`. Jekyll *will* render documents with arbitrary names if you ask it to, but since GitHub Pages will not know how to infer the data type without a file extension; the file will be served with the content-type `"application/octet-stream"` rather than `"text/html"`. For all intents and purposes, **trailing slashes are mandatory** on pretty urls.
 
-Also noteworthy, since urls like this can be accessed at either `/url/` or `/url/index.html` you will effectively have two urls for the same document on your blog. This can cause unexpected problems when integrating with third party comment systems and social widgets, and it's also bad for SEO. To fix this, I'd highly recommend putting **canonical url medatata** into your default template using the following line in your `<head>`:
+Also noteworthy, since urls like this can be accessed at either `/url/` or `/url/index.html` you will effectively have two urls for the same document on your blog. This can cause unexpected problems when integrating with third party comment systems and social widgets, and it's also bad for SEO. To fix this, I'd highly recommend putting **canonical url metadata** into your default template using the following line in your `<head>`:
 
 	<link rel="canonical" href="{{ page.url }}" />
 
