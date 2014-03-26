@@ -95,7 +95,7 @@ No website is complete without the ability to track page hits and user engagemen
 
 **Reading Time**
 
-This is a [neat idea](http://andytaylor.me/2013/04/07/reading-time/) that I saw in a [couple](http://sicanstudios.com/blog/) of places. Since Jekyll provides a handy `number_of_words` Liquid filter, you can estimate the averate reading time based on a rate of 180 words-per-minute with `{% raw %}{{ page.content | number_of_words | divided_by:180 }}{% endraw %}`.
+This is a [neat idea](http://andytaylor.me/2013/04/07/reading-time/) that I saw in a [couple](http://sicanstudios.com/blog/) of places. Since Jekyll provides a handy `number_of_words` Liquid filter, you can estimate the reading time of your posts based on a rate of 180 words-per-minute with `{% raw %}{{ page.content | number_of_words | divided_by:180 }}{% endraw %}`.
 
 Since there's no way to round a number using Liquid, the filter ends up spitting out the "[floor](http://en.wikipedia.org/wiki/Floor_and_ceiling_functions)" of the number (essentially it ignores everything after the decimal point). The original author added `append: '.0'` to get a long floating point number and then used JavaScript to round it up to a whole number, but that's a really hacky solution and it's actually unneccary. You could just use `plus:91 | divided_by:180` to trick it into rounding upward. I ended up using the following:
 {% raw %}
