@@ -100,7 +100,7 @@ This is a [neat idea](http://andytaylor.me/2013/04/07/reading-time/) that I saw 
 Since there's no way to round a number using Liquid, the filter ends up spitting out the "[floor](http://en.wikipedia.org/wiki/Floor_and_ceiling_functions)" of the number (essentially it ignores everything after the decimal point). The original author added `append: '.0'` to get a long floating point number and then used JavaScript to round it up to a whole number, but that's a really hacky solution and it's actually unneccary. You could just use `plus:91 | divided_by:180` to trick it into rounding upward. I ended up using the following:
 {% raw %}
 	{% capture readtime %}{{ post.content | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}
-	{% if readtime == '0' %} &lt; 1{% elsif %}{{ readtime }}{% endif %} min. read
+	{% if readtime == '0' %} &lt; 1{% else %}{{ readtime }}{% endif %} min. read
 {% endraw %}
 **Similar Posts**
 
