@@ -111,20 +111,22 @@ Jekyll provides a built-in mechanism to identify and display ["related" posts](h
 
 You can use `{% raw %}{{ site.time | date_to_string }}{% endraw %}` in your page footer to display a site-wide "last updated" time. This will be set to the most recent time Jekyll has compiled the blog (presumably on your last git push).
 
-**Table of Contents /w Maruku**
+**Table of Contents /w <strike>Maruku</strike> Kramdown**
 
-If you're using "Maruku" as your Markdown interpreter (which at the moment is Jekyll's default), you can take advantage of a few extra features which it defines as a ["superset" of the Markdown syntax](http://maruku.rubyforge.org/maruku.html). One feature which I've found handy for this post in particular is the ability to generate a linked [table of contents](http://maruku.rubyforge.org/maruku.html#toc-generation) using all of the headers in your document.
+> **Update — May 8th, 2014**:  Earlier in 2014 Jekyll and GitHub Pages both [announced](https://help.github.com/articles/migrating-your-pages-site-from-maruku) that they are deprecating maruku as Jekyll's default markdown compiler. Luckily, "kramdown" now has pretty solid feature parity including aspects like [table of contents support](http://kramdown.gettalong.org/converter/html.html#toc).
 
-Doing this is pretty simple, just include the following in your post somewhere:
+<strike><p>
+If you're using "Maruku" as your Markdown interpreter (which at the moment is Jekyll's default), you can take advantage of a few extra features which it defines as a <a href="http://maruku.rubyforge.org/maruku.html">"superset" of the Markdown syntax</a>. One feature which I've found handy for this post in particular is the ability to generate a linked <a href="http://maruku.rubyforge.org/maruku.html#toc-generation">table of contents</a> using all of the headers in your document.
+</p></strike>
+
+Adding a table of contents to your post is pretty simple; just include the following in your post somewhere:
 
 	* Table of Contents Placeholder
 	{:toc}
 
-Strangely for this to work, you'll need an `h1` tag [in your document somewhere](http://webiva.lighthouseapp.com/projects/38599/tickets/5-maruku-table-of-contents-not-generating-without-extra-h1-tag). I don't like this requirement because I prefer to have my post title be `h1` and all post content using `h2` or lower. I got around it with a somewhat hacky solution. I just made sure to include `# Table of Contents` right before the lines above, and replaced it manually in my post template like so:
-{% raw %}
-	{{ content | replace: "<h1 id='table_of_contents'>Table of Contents</h1>", "<strong>Table of Contents:</strong>" | replace: "<ul style='list-style: none;'>", "<ul>" }}
-{% endraw %}
-I also removed the inline styling on the list it generates because I prefer to use my own CSS.
+<strike><p>
+Strangely for this to work, you'll need an `h1` tag <a href="http://webiva.lighthouseapp.com/projects/38599/tickets/5-maruku-table-of-contents-not-generating-without-extra-h1-tag">in your document somewhere</a>. I don't like this requirement because I prefer to have my post title be `h1` and all post content using `h2` or lower. I got around it with a somewhat hacky solution. I just made sure to include `# Table of Contents` right before the lines above, and replaced it manually in my post template. I also removed the inline styling on the list it generates because I prefer to use my own CSS.
+</p></strike>
 
 **Static Asset Combination**
 
