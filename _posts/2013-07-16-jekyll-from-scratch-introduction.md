@@ -60,7 +60,7 @@ I suspect many of the remaining plugin-based workarounds will also be made obsol
 
 ## Getting Started
 
-Getting your feet wet with Jekyll is very simple. I find it best to force installation of the same versions of Jekyll and Liquid [currently used on GitHub Pages](https://github.com/github/pages-gem/blob/master/github-pages.gemspec#L18) to ensure feature parity (*1.0.3* and *2.5.0* respectively as of July 2013). Assuming you already have [ruby installed](http://www.ruby-lang.org/en/downloads/), following Jekyll's [Quick-Start Guide](http://jekyllrb.com/docs/quickstart/) is as simple as this:
+Getting your feet wet with Jekyll is very simple. I find it best to force installation of the same versions of Jekyll and Liquid [currently used on GitHub Pages](https://github.com/github/pages-gem/blob/master/lib/github-pages.rb#L9) to ensure feature parity (*1.0.3* and *2.5.0* respectively as of July 2013). Assuming you already have [ruby installed](http://www.ruby-lang.org/en/downloads/), following Jekyll's [Quick-Start Guide](http://jekyllrb.com/docs/quickstart/) is as simple as this:
 
 	$ gem update --system
 	$ gem install liquid -v 2.5.0
