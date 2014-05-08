@@ -8,6 +8,12 @@ Having recently made the switch from my old PaaS provider to [AWS OpsWorks](http
 
 {{ more }}
 
+### Table of Contents
+{:.no_toc}
+
+* Table of Contents Placeholder
+{:toc}
+
 ## Why Vagrant?
 
 Vagrant is an awesome tool for local web development. With a few Chef cookbooks Vagrant can create a portable, consistant development environment to mirror your production server down to the last detail. No longer do you have to worry that an app which runs perfectly on your OSX machine's LAMP stack will break down when you push it to EC2 due to subtle differences in your production server's configuration. No longer do you have to juggle multiple versions of PHP or Python or Ruby on your local dev machine so that you can work on multiple projects with different dependencies.
@@ -28,6 +34,8 @@ There are a few minor caveats to note here.  First, Amazon Linux is not availabl
 
 ![OpsWorks Stack Configuration](/img/posts/opsworks-vagrant-add-stack.png)
 
+> **Note:** All of the code used in this tutorial can be found on GitHub at [https://github.com/pixelcog/opsworks-local/](https://github.com/pixelcog/opsworks-local/).  If you want to skip ahead and play around with it you can simply clone it, install the dependencies, and run `vagrant up`
+
 ## Virtualizing "Simple PHP App" Step 1 & 2
 
 Still here?  Good.
@@ -36,7 +44,7 @@ After having completed the OpsWorks tutorial through step 2 your simple stack sh
 
 ![OpsWorks Example Stack](/img/posts/opsworks-vagrant-php_walkthrough_arch_2.png)
 
-This is what we're going to emulate.
+This is what we're going to emulate first.
 
 If you haven't done so already, you'll need to download Vagrant from from the [official website](http://downloads.vagrantup.com/) and install it, then you'll need to do the same for [VirtualBox](https://www.virtualbox.org/wiki/Downloads). Both are free tools.
 
@@ -359,7 +367,7 @@ Then add a the file "db-connect.php" with the following:
 
 Now you can modify whatever you want and have the changes reflected immediately.
 
-Each of these deployment options are nice for different scenarios. When actively developing your app, saving yourself from reprovisioning each time you want to test it out is quite handy. However the former option gives you an opportunity to debug your bootstrap recipe if you have one.
+Each of these deployment options are nice for different scenarios. When actively developing your app, saving yourself from reprovisioning each time you want to test it out is quite handy. However the former option gives you an opportunity to debug your deploy recipes if you have any.
 
 ## Going Forward / Final Notes
 
