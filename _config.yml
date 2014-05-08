@@ -13,5 +13,5 @@ excerpt_separator: "{{ more }}"
 
 safe:     true
 pygments: false
-markdown: 'maruku'
+markdown: 'kramdown'
 timezone: 'America/Chicago'

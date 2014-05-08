@@ -10,7 +10,8 @@ updated: 2013-11-22 @ 12:44pm
 
 {{ more }}{% raw %}
 
-# Table of Contents
+### Table of Contents
+{:.no_toc}
 
 * Table of Contents Placeholder
 {:toc}
@@ -77,20 +78,20 @@ Now simply go to `localhost:4000` and marvel at your creation...
 
 Looking at the shell directory structure that we just created you'll notice a `_posts` subdirectory.  This is where your published blog posts will live. These must all follow the naming convention `YYYY-MM-DD-name-of-post.ext`. The example post uses the extension `*.markdown` but I much prefer the sussinct `*.md` extension; it makes no difference either way. Jekyll will infer the date and permalink slug of your post from this name unless overridden in the [YAML front-matter](http://jekyllrb.com/docs/frontmatter/) (the content between the lines with three dashes at the start of the file):
 
-	#---
+	---
 	layout: post
 	title:  "Welcome to Jekyll!"
 	date:   2013-05-24 18:34:38
 	categories: jekyll update
-	#---
+	---
 	
 	You'll find this post [...]
 
 Beginning with the recent release of Jekyll 1.0, we can now create and preview blog post [drafts](https://gist.github.com/benbalter/5555992) without mixing them in with published posts and conforming to this rigid file naming convention. Simply create a `_drafts` folder in the root directory of your blog and add a new file to it. Let's call it `hello-world.md`:
 
-	#---
+	---
 	layout: post
-	#---
+	---
 	
 	# Hello World
 	This is my first _ever_ Jekyll post!
@@ -141,6 +142,7 @@ Following the instructions on [help.github.com](https://help.github.com/articles
 	$ git add -A && git commit -m "initial commit"
 	$ git remote add origin git@github.com:username/username.github.io.git
 	$ git push -u origin master
+
 _* remember to replace username with your user or org name_
 
 Within 10 minutes (but usualy much quicker) your Jekyll blog will be rendered and online!
@@ -156,6 +158,7 @@ Add a `CNAME` file to the github repo to tell it to use our domain:
 	$ echo "mydomain.com" >> CNAME
 	$ git add -A && git commit -m "enable custom domain"
 	$ git push
+
 _* replace mydomain.com with your domain name_
 
 Wait for the DNS zone changes to propogate (up to 48 hours, but usually much sooner), and enjoy!

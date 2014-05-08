@@ -122,33 +122,21 @@ blockquote {
 	font-style:italic;
 }
 
-#table_of_contents {
-	margin-bottom: 0;
+#table-of-contents {
+	margin-bottom: 0.5em;
 }
-.maruku_toc {
+#markdown-toc {
 	font-size: 0.9em;
-	*zoom: 1;
-}
-.maruku_toc:before,
-.maruku_toc:after {
-	display: table;
-	content: " ";
-}
-.maruku_toc:after {
-	clear: both;
-}
-
-.maruku_toc > ul {
-	float: left;
+	display: inline-block;
 	background: #f8f8f8;
 	border-radius: 5px;
 	border: 1px solid #e5e5e5;
 	padding: 0.5em 1em 0.5em 2em;
 }
-
-.maruku_toc li > ul {
+#markdown-toc li > ul {
 	margin-bottom: 0;
 }
+
 
 code, pre {
 	font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;

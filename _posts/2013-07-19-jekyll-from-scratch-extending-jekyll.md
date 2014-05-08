@@ -9,7 +9,8 @@ In my previous posts I've covered [the basics of Jekyll]({% post_url 2013-07-16-
 
 {{ more }}
 
-# Table of Contents
+### Table of Contents
+{:.no_toc}
 
 * Table of Contents Placeholder
 {:toc}
@@ -59,7 +60,7 @@ In these examples I've utilized the `disqus_url` variable to ensure that comment
 
 ### Social Widgets
 
-Integrating social plugins into your website is pretty straight forward. Usually it's just a little bit of javascript to add to a template. If you use any of these, this is where the `rel="canonical"` declaration that I suggested [in the previous post]({% post_url 2013-07-18-jekyll-from-scratch-core-architecture %}#pitfalls_with_pretty_urls) can become important.
+Integrating social plugins into your website is pretty straight forward. Usually it's just a little bit of javascript to add to a template. If you use any of these, this is where the `rel="canonical"` declaration that I suggested [in the previous post]({% post_url 2013-07-18-jekyll-from-scratch-core-architecture %}#pitfalls-with-pretty-urls) can become important.
 
 **Facebook** — Go to [Facebook's Developer Page](https://developers.facebook.com/docs/plugins/) to add "Like" buttons, "Share" widgets, and so on.
 
@@ -129,8 +130,8 @@ I also removed the inline styling on the list it generates because I prefer to u
 
 As demonstrated by [Development Seed](http://developmentseed.org/blog/2011/09/09/jekyll-github-pages/) and others, you can utilize liquid `{% raw %}{% include file.ext %}{% endraw %}` tags to consolidate static assets for your site. Say you have a handful of javascript or css files which are included on each page. Simply move them to the `_includes` folder and create one consolidated file like so:
 {% raw %}
-	#---
-	#---
+	---
+	---
 	{% include file1.css %}
 	{% include file2.css %}
 	...

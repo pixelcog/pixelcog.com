@@ -9,7 +9,8 @@ Now that we've covered the [basics of Jekyll as a blogging platform]({% post_url
 
 {{ more }}{% raw %}
 
-# Table of Contents
+### Table of Contents
+{:.no_toc}
 
 * Table of Contents Placeholder
 {:toc}
@@ -55,19 +56,19 @@ Then I created files for each of my pages in the `_pages` directory with front-m
 
 **"\_pages/home.md"**:
 
-	#---
+	---
 	permalink: /
 	layout:    default
 	title:     Home
-	#---
+	---
 
 **"\_pages/about.md"**:
 
-	#---
+	---
 	permalink: /about/
 	layout:    default
 	title:     About Us
-	#---
+	---
 
 Once my site is fully built out, I'll be able to do the majority of my routine edits and updates by simply modifying markdown files in `_pages` and `_posts`, only accessing the others when I decide to make structural or cosmetic changes to the site.
 
@@ -95,11 +96,11 @@ I've created the following file in `/_layouts/redirect.html` (partly borrowed fr
 
 Now `/blog/2013.html` contains the following:
 
-	#---
+	---
 	permalink: /blog/2013/
 	redirect:  /blog/
 	layout:    redirect
-	#---
+	---
 
 All you need is the front-matter – just five lines and you're done.
 
@@ -171,8 +172,8 @@ The `{% comment %}` tags are there only to prevent the generated file from havin
 
 **[Robots.txt](http://en.wikipedia.org/wiki/Robots_exclusion_standard)** as you probably are aware is a simple file used to blacklist urls for search engine spiders and other bots. In this sense it serves the opposite function of a sitemap. It also can be used to tell spiders where to find your sitemap. Here is my implementation:
 
-	#---
-	#---
+	---
+	---
 	User-agent: * 
 	{% for node in site.pages %}{% if node.noindex %}{% assign isset = true %}Disallow: {{ node.url }}
 	{% endif %}{% endfor %}{% if isset != true %}Disallow:
@@ -185,20 +186,20 @@ Both of these implementations require the `url` value to be defined within `_con
 
 You may have noticed I've also introduced two new optional front-matter variables: `updated` and `noindex`. These can be used like so:
 
-	#---
+	---
 	permalink: /contact/thankyou/
 	layout:    default
 	title:     Thank You
 	noindex:   true
-	#---
+	---
 
 Doing this will add `/contact/thankyou/` to my "Disallow" list in `robots.txt` and remove it from `sitemap.xml` entirely.
 
-	#---
+	---
 	layout:  post
 	title:   Hello World
 	updated: 2013-06-22
-	#---
+	---
 
 Doing this will change the `lastmod` timestamp of the post in `sitemap.xml` (and later we'll use this in our rss/atom feed as well).
 
@@ -226,7 +227,7 @@ Note the **`strip_html`** filter on `post.excerpt`. This is necessary to "flatte
 
 ### Pagination
 
-After adding post excerpts to our blog index, it no longer seems practical to display a complete list of blog posts on a single page. This is where *pagination* comes in handy.  We already customized our pagination permalinks a [few sections back](#configuring_permalinks). Here are the settings needed in `_config.yml`:
+After adding post excerpts to our blog index, it no longer seems practical to display a complete list of blog posts on a single page. This is where *pagination* comes in handy.  We already customized our pagination permalinks a [few sections back](#configuring-permalinks). Here are the settings needed in `_config.yml`:
 
 	paginate:      10
 	paginate_path: '/blog/page:num/'
@@ -270,9 +271,9 @@ Having had no real experience generating RSS or Atom documents before, I decided
 
 Here's my implementation:
 
-	#---
-	#---
-	#<?xml version="1.0" encoding="UTF-8"?>
+	---
+	---
+	<?xml version="1.0" encoding="UTF-8"?>
 	<feed xmlns="http://www.w3.org/2005/Atom">
 		<title>{{ site.name | xml_escape }}</title>
 		<link href="{{ site.url }}{{ page.url }}" rel="self" />
@@ -295,7 +296,7 @@ Here's my implementation:
 	{% endfor %}
 	</feed>
 
-Note this takes advantage of an optional `post.updated` front-matter variable which I also was using in [sitemap.xml](#sitemaps_and_robotstxt). I had to use `append: '@12am'` in the `post.updated` instance to ensure that it would spit out a full RFC-3339 date rather than a short `YYYY-MM-DD` one.
+Note this takes advantage of an optional `post.updated` front-matter variable which I also was using in [sitemap.xml](#sitemaps-and-robotstxt). I had to use `append: '@12am'` in the `post.updated` instance to ensure that it would spit out a full RFC-3339 date rather than a short `YYYY-MM-DD` one.
 
 Also, in while doing some research I learned that GitHub Pages strangely serves up xml files as `text/xml` with `us-ascii` rather than `utf-8`. To get around this, I changed my feed's filename to `/blog/feed.atom`. Doing this forces GitHub to use the proper content-type and character-encoding. Credit goes to [Taylor Fausak's blog](http://taylor.fausak.me/2012/04/26/serving-atom-feeds-with-github-pages/) for this tip.
 
@@ -309,12 +310,12 @@ Once you've added your atom feed, don't forget to include a line in your blog te
 
 Tags and categories are two special front-matter attributes available to blog posts, and they function practically the same. Any post can be associated with any number of tags or any number of categories through a simple YAML declaration:
 
-	#---
+	---
 	layout: post
 	title:  "My Awesome Blog Post"
 	category: blog
 	tags: blog blogging awesomeness
-	#---
+	---
 
 Where these become useful is in their corresponding global `site` variables. You can loop over all of the categories used in your blog with `site.categories`, and loop over all of your tags with `site.tags`. In addition, you can loop over all of the posts in a given category with `site.categories[CATEGORY]` or all of the posts with a given tag using `site.tags[TAG]`. These can be used to construct category-specific indexes, or archive pages featuring every post with a given tag.
 
@@ -322,7 +323,7 @@ Unfortunately, there is no way _([yet](https://github.com/mojombo/jekyll/pull/87
 
 Lastly, there isn't currently a way to implement pagination on tag or category indexes without resorting to manual page generation or plugins. I am not currently using tags on this blog as this is only my third posting and a tag archive wouldn't be especially useful yet, but I will explore this a bit more as my blog matures.
 
-One [interesting solution](http://alexpearce.me/2012/04/simple-jekyll-searching/) I've seen is to list tags through a "search" landing page by sniffing out a query parameter, utilizing a Jekyll-generated `search.json` file and some javascript. More on search in the [next blog post]({% post_url 2013-07-19-jekyll-from-scratch-extending-jekyll %}#interactive_search).
+One [interesting solution](http://alexpearce.me/2012/04/simple-jekyll-searching/) I've seen is to list tags through a "search" landing page by sniffing out a query parameter, utilizing a Jekyll-generated `search.json` file and some javascript. More on search in the [next blog post]({% post_url 2013-07-19-jekyll-from-scratch-extending-jekyll %}#interactive-search).
 
 ### More Tips and Tricks
 
