@@ -186,8 +186,8 @@ In my [next post]({% post_url 2013-07-18-jekyll-from-scratch-core-architecture %
 - [Liquid Filters Reference](http://wiki.shopify.com/Filters)
 - [Markdown Reference](http://daringfireball.net/projects/markdown/syntax)
 - [GitHub Pages Help Section](https://help.github.com/categories/20/articles)
-- [Development Seed's Jekyll Blog](http://developmentseed.org/blog/2011/09/09/jekyll-github-pages/) — really helped me understand the basics of Jekyll's rendering engine when I started out, and provides some really clever examples of what you can do with Jekyll.
-- [Sebastian Teumert's](http://teumert.net/2012-08-27-release-jekyll-template-toolkit.html) [Jekyll Template Toolkit](https://github.com/NetzwergX/jekyll-template-toolkit/) — an indispensable plugin-free Jekyll resource.
+- [Development Seed's Jekyll Blog](http://www.developmentseed.org/blog/2011/09/09/jekyll-github-pages/) — really helped me understand the basics of Jekyll's rendering engine when I started out, and provides some really clever examples of what you can do with Jekyll.
+- [Sebastian Teumert's](http://teumert.net/en/2012-08-27-release-jekyll-template-toolkit.html) [Jekyll Template Toolkit](https://github.com/NetzwergX/jekyll-template-toolkit/) — an indispensable plugin-free Jekyll resource.
 - [Tobias Sjösten's Blog](http://vvv.tobiassjosten.net/jekyll/) — has some nice tips and tricks for Jekyll, also plugin-free.
 - [StackOverflow's Jekyll Tag](http://stackoverflow.com/questions/tagged/jekyll) — the place to go to ask questions if you get hung up.
 
