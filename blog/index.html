@@ -8,7 +8,7 @@ blogfeed:  true
 <hr />
 
 <div class="articles">
-{% for post in paginator.posts %}{% capture readtime %}{{ post.content | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}
+{% for post in paginator.posts %}{% capture readtime %}{{ post.content | number_of_words | plus:91 | divided_by:180.0 | append:'.' | split:'.' | first }}{% endcapture %}
 	<h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	<p class="post-meta">
 		{{ post.date | date_to_string }} &bull;

@@ -2,7 +2,7 @@
 layout: default
 blogfeed: true
 ---
-{% capture readtime %}{{ page.content | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}
+{% capture readtime %}{{ page.content | number_of_words | plus:91 | divided_by:180.0 | append:'.' | split:'.' | first }}{% endcapture %}
 
 <h1 class="post-title">{{ page.title }}</h1>
 <p class="post-meta">
