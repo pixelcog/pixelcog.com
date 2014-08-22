@@ -3,7 +3,7 @@ layout:  post
 title:   Jekyll From Scratch - Getting Started
 tags:    jekyll
 image:   jekyll-pt1-intro.gif
-updated: 2013-11-22 @ 12:44pm
+updated: 2014-08-21 @ 7:31pm
 ---
 
 [Jekyll](http://jekyllrb.com/) + [GitHub Pages](http://pages.github.com/) is the web platform underlying the new and improved PixelCog.com. I've decided to document my experience with it as I go along, consolidating best practices, tips, and tricks into a helpful guide to use for my own reference and the benefit of anyone else out there who might learn from my experience.
@@ -60,11 +60,11 @@ I suspect many of the remaining plugin-based workarounds will also be made obsol
 
 ## Getting Started
 
-Getting your feet wet with Jekyll is very simple. I find it best to force installation of the same versions of Jekyll and Liquid [currently used on GitHub Pages](https://github.com/github/pages-gem/blob/master/lib/github-pages.rb#L9) to ensure feature parity (*1.0.3* and *2.5.0* respectively as of July 2013). Assuming you already have [ruby installed](http://www.ruby-lang.org/en/downloads/), following Jekyll's [Quick-Start Guide](http://jekyllrb.com/docs/quickstart/) is as simple as this:
+Getting your feet wet with Jekyll is very simple. I find it best to force installation of the same versions of Jekyll and Liquid [currently used on GitHub Pages](https://github.com/github/pages-gem/blob/master/lib/github-pages.rb#L9) to ensure feature parity (<strike><em>1.0.3</em> and <em>2.5.0</em> respectively as of July 2013</strike>)(*2.2.0* and *2.6.1* as of August 2014). Assuming you already have [ruby installed](http://www.ruby-lang.org/en/downloads/), following Jekyll's [Quick-Start Guide](http://jekyllrb.com/docs/quickstart/) is as simple as this:
 
 	$ gem update --system
-	$ gem install liquid -v 2.5.0
-	$ gem install jekyll -v 1.0.3
+	$ gem install liquid -v 2.6.1
+	$ gem install jekyll -v 2.2.0
 	$ jekyll new blog
 	$ cd blog
 	$ jekyll serve -w
@@ -73,6 +73,8 @@ Now simply go to `localhost:4000` and marvel at your creation...
 (*`crtl+c` when you're done*)
 
 > **Update — Nov 22nd, 2013**:  GitHub Pages now has its own gemfile to install the currently used versions of Jekyll and its dependencies. You can now run `gem install github-pages` in place of the above install commands. More information [here](https://help.github.com/articles/using-jekyll-with-pages#installing-jekyll).
+
+> **Update — Aug 21st, 2014**:  Fixed Jekyll and Liquid versions.
 
 ### Writing Your First Blog Post
 
