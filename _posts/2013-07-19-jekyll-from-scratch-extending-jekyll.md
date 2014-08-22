@@ -3,6 +3,7 @@ layout: post
 title:  Jekyll From Scratch - Extending Jekyll
 tags:   jekyll
 image:  jekyll-pt3-extending-jekyll.gif
+updated: 2014-08-21 @ 7:42pm
 ---
 
 In my previous posts I've covered [the basics of Jekyll]({% post_url 2013-07-16-jekyll-from-scratch-introduction %}), and [building a static website framework]({% post_url 2013-07-18-jekyll-from-scratch-core-architecture %}) from the ground up. In this post, I'll demonstrate ways in which you can enhance your otherwise-static Jekyll website or blog with interactive components like comment threads, site search, and contact forms, and I'll share a few additional tips and tricks I've run into as well.
@@ -98,11 +99,14 @@ No website is complete without the ability to track page hits and user engagemen
 
 This is a [neat idea](http://andytaylor.me/2013/04/07/reading-time/) that I saw in a [couple](http://sicanstudios.com/blog/) of places. Since Jekyll provides a handy `number_of_words` Liquid filter, you can estimate the reading time of your posts based on a rate of 180 words-per-minute with `{% raw %}{{ page.content | number_of_words | divided_by:180 }}{% endraw %}`.
 
-Since there's no way to round a number using Liquid, the filter ends up spitting out the "[floor](http://en.wikipedia.org/wiki/Floor_and_ceiling_functions)" of the number (essentially it ignores everything after the decimal point). The original author added `append: '.0'` to get a long floating point number and then used JavaScript to round it up to a whole number, but that's a really hacky solution and it's actually unneccary. You could just use `plus:91 | divided_by:180` to trick it into rounding upward. I ended up using the following:
+Since there's no way to round a number using Liquid, the filter ends up spitting out the "[floor](http://en.wikipedia.org/wiki/Floor_and_ceiling_functions)" of the number (essentially it ignores everything after the decimal point). The original author added `append: '.0'` to get a long floating point number and then used JavaScript to round it up to a whole number, but that's a really hacky solution and it's actually unnecessary. You could just use `plus:91 | divided_by:180` to trick it into rounding upward. I ended up using the following:
 {% raw %}
-	{% capture readtime %}{{ post.content | number_of_words | plus:91 | divided_by:180 }}{% endcapture %}
+	{% capture readtime %}{{ post.content | number_of_words | plus:91 | divided_by:180.0 | append:'.' | split:'.' | first }}{% endcapture %}
 	{% if readtime == '0' %} &lt; 1{% else %}{{ readtime }}{% endif %} min. read
 {% endraw %}
+
+> **Update — Aug 21st, 2014**:  A recent update to Liquid broke my original read time trick.  It used to truncate everything after the decimal place, but now it will display uneven divisions as a fraction or a long floating point number.  You can get around this by adding `.0` to the divisor and then adding `| append:'.' | split:'.' | first`.  I have updated the example code above.  It's ugly but it still works.
+
 **Similar Posts**
 
 Jekyll provides a built-in mechanism to identify and display ["related" posts](http://jekyllrb.com/docs/variables/#site_variables) with the `site.related_posts` variable. This may be useful to display a handful of links for further reading below your current post. Alternatively, you could loop through similarly-tagged posts and list those using `site.tags[tagname]`.
