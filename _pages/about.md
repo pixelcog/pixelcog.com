@@ -12,7 +12,7 @@ nobio:     true
 
 PixelCog is multi-talented web programming shop operated by **Mike Greiling** in Minneapolis, MN.
 
-We specialize in both client and server-side coding and partener with [talented design teams](http://www.superlabdesign.com/) on most of our projects.  You can take a look at our recent work in the **[Projects](/projects/)** section of this website.
+We specialize in both client and server-side coding and partner with [talented design teams](http://www.superlabdesign.com/) on most of our projects.  You can take a look at our recent work in the **[Projects](/projects/)** section of this website.
 
 ### Hire Us!
 
