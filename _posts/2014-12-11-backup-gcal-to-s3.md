@@ -1,6 +1,6 @@
 ---
 layout:  post
-title:   Backup Your Google Calendar to S3
+title:   Backing Up a Google Calendar to S3
 tags:    bash aws s3 iam
 image:   gcal-backup.png
 ---
@@ -17,6 +17,8 @@ For this project I decided to write a [simple shell script](https://gist.github.
 
 ### Granting Access to Your S3 Bucket from EC2
 Now, before we can use the `aws` command to do anything useful, we need to ensure it has access to our S3 bucket.  There are [several ways](https://github.com/aws/aws-cli#getting-started) to provide your access credentials through environment variables or config files, but if – like me – you are planning on running this backup script on elastic compute cloud, you can simply grant access to the EC2 instance directly and the aws command will magically configure itself.
+
+> **Note:** If you aren't planning to use EC2, and you already have an access key pair set up for your S3 bucket, you can [skip](#locating-our-calendar) this section...
 
 How does that work?  Well, EC2 allows you to assign IAM "roles" to your EC2 instances when you first start them up.  These roles are essentially the same as your IAM user credentials, but they are attached to the EC2 instance and discovered automatically through your [instance meta-data](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html).
 
