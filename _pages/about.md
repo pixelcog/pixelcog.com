@@ -22,11 +22,12 @@ Got an interesting web app that you want built? Need some technical consulting o
 
 We're always looking for talented software engineers with experience in one or more of the following tools:
 
+* _Ruby_
 * _PHP 5.3+_ (Experience with the _[Lithium](http://lithify.me/)_ framework is a plus)
 * _MySQL_
 * _[MongoDB](http://www.mongodb.org/)_
 * _JavaScript_
-* _[Angular-JS](http://angularjs.org/)_
+* _[React](http://facebook.github.io/react/)_ and _[Flux](http://facebook.github.io/flux/)_
 * Responsive _HTML5_ and _CSS_ design
 
 If you are available for contracting opportunities or part-time employment, [please contact us](/contact/)!
