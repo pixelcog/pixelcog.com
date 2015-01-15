@@ -4,6 +4,9 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="refresh" content="1;url={{ page.redirect }}" />
 		<link rel="canonical" href="{{ page.redirect }}" />
+{% if page.blogfeed %}
+		<link rel="alternate" type="application/atom+xml" title="{{ site.name }} — Feed" href="{{ site.url }}/blog/feed.atom" />
+{% endif %}
 		<script type="text/javascript">
 			window.location.href = "{{ page.redirect }}"
 		</script>
