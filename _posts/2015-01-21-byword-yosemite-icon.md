@@ -32,6 +32,8 @@ You may need to `killall Dock` before the new icon will show up for you.
 
 ## Rounded Yosemite Icon Template
 
+[![Yosemite icon template](/img/posts/byword-icon-template.jpg){: .pull-right-responsive}][psd-file]
+
 If you want to create your own rounded Yosemite-style icon like this one, you can download the PSD file [here][psd-file].
 
 The process is pretty simple.  Essentially you'll need to export versions of your icon as png images ranging from 16x16 @ 72ppi to 512x512 @ 144ppi (which is actually 1024x1024), then run a command to compile them all into an icon.  If you have Xcode installed on your system, it comes bundled with the `iconutil` command needed to turn your image into an *icns* file.

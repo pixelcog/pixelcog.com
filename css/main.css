@@ -402,18 +402,30 @@ img.profile {
 	height:100px;
 }
 
-img.pull-right {
+img.pull-right,
+img.pull-right-responsive {
 	max-width: 40%;
 	float: right;
 	margin: 0 0 1em 1em;
 }
 
-img.pull-left {
+img.pull-left,
+img.pull-left-responsive {
 	max-width: 40%;
 	float: right;
 	margin: 0 1em 1em 0;
 }
 
+@media print, screen and (max-width: 700px) {
+	img.pull-left-responsive,
+	img.pull-right-responsive {
+		display: block;
+		width: 300px;
+		max-width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+}
 
 /* Responsive Adjustments */
 
