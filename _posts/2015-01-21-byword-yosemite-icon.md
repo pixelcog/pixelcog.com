@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  Flat Byword Icon for Yosemite
-tags:   byword yosemite icon flat design osx
-image:  byword-icon.png
+layout:  post
+title:   Flat Byword Icon for Yosemite
+tags:    byword yosemite icon flat design osx
+image:   byword-icon.png
+updated: 2015-01-21 @ 7:06pm
 ---
 
 Since upgrading to Yosemite, I've been loving the new design and the flat icons.  However, the few old-school icons left on my dock are now a complete eye sore by comparison.  Since the Byword icon is staring back at me most of the work day I decided to go in update it.
@@ -27,6 +28,7 @@ To use this icon, simply download it [here][icon-file], then find your Byword ap
 
 > **Note:** a lot of icon tutorials tell you to go into the .app file's resources and replace the default icon within the application itself.  This **[will not work](http://forums.macrumors.com/showthread.php?t=1105471)** with Mac App Store apps like Byword because they sign their code and any change to the package's contents will require a new signature.  Using the "*Get Info*" method is the only way to do this.
 
+You may need to `killall Dock` before the new icon will show up for you.
 
 ## Rounded Yosemite Icon Template
 
