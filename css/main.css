@@ -418,17 +418,17 @@ img.pull-left {
 /* Responsive Adjustments */
 
 @media print, screen and (max-width: 1050px) {
-	
+
 	div.wrapper {
 		width:600px;
 	}
-	
+
 	header, section, footer {
 		float:none;
 		position:static;
 		width:auto;
 	}
-	
+
 	header {
 		background: none;
 		position: relative;
@@ -437,24 +437,24 @@ img.pull-left {
 		min-height: 0;
 		border: none;
 	}
-	
+
 	section {
 		border:1px solid #eee;
 		border-width:1px 0;
 		padding:20px 0;
 		margin:0 0 20px;
 	}
-	
+
 	header a small {
 		display:inline;
 	}
-	
+
 	header ul {
 		position:absolute;
 		right:0;
 		top:5px;
 	}
-	
+
 	footer {
 		text-align: center;
 		max-width: 400px;
@@ -467,29 +467,29 @@ img.pull-left {
 		word-wrap:break-word;
 		padding-top: 15px;
 	}
-	
+
 	div.wrapper {
 		width:auto;
 		margin: 0;
 	}
-	
+
 	header {
 		padding: 0 0 15px;
 	}
-	
+
 	nav ul {
 	 position: static;
 	 margin: 0 auto;
 	}
-	
+
 	header p.view {
 		position:static;
 	}
-	
+
 	header {
 		text-align: center;
 	}
-	
+
 	pre, pre > code {
 		word-wrap:normal;
 	}
