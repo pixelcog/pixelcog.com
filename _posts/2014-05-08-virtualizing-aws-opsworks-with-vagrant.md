@@ -9,7 +9,7 @@ Having recently made the switch from my old PaaS provider to [AWS OpsWorks](http
 
 {{ more }}
 
-> **Update — Feb 12th, 2015**: Since recent updates to AWS OpsWorks broke my original workflow, the tutorial in this post has been altered significantly from the first posting.  If you are looking for the original article, you can find it [here](https://github.com/pixelcog/pixelcog.github.io/blob/3c3c0029e1bd54b13d43914761ead2a6a1f50fd9/_posts/2014-05-08-virtualizing-aws-opsworks-with-vagrant.md).
+> **Update — Feb 12th, 2015**: Since recent updates to AWS OpsWorks broke my original workflow, the tutorial in this post has been altered significantly from the first posting.  If you are looking for the original article, you can find it [here](https://github.com/pixelcog/pixelcog.com/blob/3c3c0029e1bd54b13d43914761ead2a6a1f50fd9/_posts/2014-05-08-virtualizing-aws-opsworks-with-vagrant.md).
 
 ### Table of Contents
 {:.no_toc}

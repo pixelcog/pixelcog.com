@@ -47,7 +47,7 @@ While you *can* utilize both Liquid and Markdown in the same file, I think its b
 
 Technically these files could be anywhere in the Jekyll folder as long as they contain the correct `permalink` front-matter, but I chose to organize them this way out of personal preference.
 
-To accomplish this, I added the following lines to my `_config.yml`: 
+To accomplish this, I added the following lines to my `_config.yml`:
 
 	include: ['_pages']
 	relative_permalinks: false
@@ -166,7 +166,7 @@ One minor caveat to consider here is the **sort order** of the items within `sit
 
 **[Sitemaps](http://en.wikipedia.org/wiki/Sitemaps)** are simple xml files used to let search spiders from Google, Bing, and others know where your content is without having to crawl your site and sniff out links. For most uncomplicated Jekyll blogs they probably aren't necessary, but all the cool kids seem to be including them so I guess I will too.
 
-You can check out my sitemap.xml implementation [here](https://github.com/pixelcog/pixelcog.github.io/blob/master/sitemap.xml), based partly on an example from [davidensinger.com](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/).
+You can check out my sitemap.xml implementation [here](https://github.com/pixelcog/pixelcog.com/blob/master/sitemap.xml), based partly on an example from [davidensinger.com](http://davidensinger.com/2013/03/generating-a-sitemap-in-jekyll-without-a-plugin/).
 
 The `{% comment %}` tags are there only to prevent the generated file from having a ton of newlines in it. Also note that I use `date: '%Y-%m-%d'` in place of `date_to_xmlschema` for my posts since I don't actually plan to track the time of day in my post front-matter. If you do, you may want to change it back.
 
@@ -174,7 +174,7 @@ The `{% comment %}` tags are there only to prevent the generated file from havin
 
 	---
 	---
-	User-agent: * 
+	User-agent: *
 	{% for node in site.pages %}{% if node.noindex %}{% assign isset = true %}Disallow: {{ node.url }}
 	{% endif %}{% endfor %}{% if isset != true %}Disallow:
 	{% endif %}

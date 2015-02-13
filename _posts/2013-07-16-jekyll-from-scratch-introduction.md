@@ -86,7 +86,7 @@ Looking at the shell directory structure that we just created you'll notice a `_
 	date:   2013-05-24 18:34:38
 	categories: jekyll update
 	---
-	
+
 	You'll find this post [...]
 
 Beginning with the recent release of Jekyll 1.0, we can now create and preview blog post [drafts](https://gist.github.com/benbalter/5555992) without mixing them in with published posts and conforming to this rigid file naming convention. Simply create a `_drafts` folder in the root directory of your blog and add a new file to it. Let's call it `hello-world.md`:
@@ -94,7 +94,7 @@ Beginning with the recent release of Jekyll 1.0, we can now create and preview b
 	---
 	layout: post
 	---
-	
+
 	# Hello World
 	This is my first _ever_ Jekyll post!
 
@@ -118,13 +118,13 @@ All other files follow these four rules:
 
 1. Files and directories which begin with `.` or `_` are ignored.  
    _(unless overridden in `_config.yml`)_
-   
+
 2. Files *without* YAML front-matter are passed through when rendered.  
    _(`/css/style.css` or `/foo.html` with no front-matter are copied verbatim)_  
-   
+
 3. Files *with* YAML front-matter are processed with Liquid and (if appropriate) rendered in Markdown with an appropriate file extension change.  
    _(`/file.md` with front-matter becomes `/file.html`)_
-   
+
 4. Files with YAML front-matter which specify a permalink are preprocessed and rendered at the given url. If the permalink is a directory, index.html is used.  
    _(`permalink: /fancy/link/` yields `/fancy/link/index.html`)_
 
@@ -195,7 +195,7 @@ In my [next post]({% post_url 2013-07-18-jekyll-from-scratch-core-architecture %
 
 One of the biggest boons for budding young web developers in the last few decades has been the ability to hit "view source" to instantly see what's behind the curtain of their favorite website. For a kid who begged his parents for [triangle shaped screwdrivers](https://en.wikipedia.org/wiki/List_of_screw_drives#TA) so that he could dissect his McDonalds toys and put them back together, I found this feature invaluable when I first cut my teeth on HTML in my early teens. It's always easier to learn by observing real-life examples.
 
-This is one reason why Jekyll's pairing with GitHub Pages is so awesome. Many of the Jekyll websites out there are hosted on public GitHub repositories, free to anyone who wants to dissect them and see what makes them tick. You can view the source material for [this post](https://github.com/pixelcog/pixelcog.github.io/blob/master/{{page.path}}), and even [this entire website](https://github.com/pixelcog/pixelcog.github.io/) on GitHub. One of the best ways I've found to learn it is to find a Jekyll blog you like and take a look at how they do things.
+This is one reason why Jekyll's pairing with GitHub Pages is so awesome. Many of the Jekyll websites out there are hosted on public GitHub repositories, free to anyone who wants to dissect them and see what makes them tick. You can view the source material for [this post](https://github.com/pixelcog/pixelcog.com/blob/master/{{page.path}}), and even [this entire website](https://github.com/pixelcog/pixelcog.com/) on GitHub. One of the best ways I've found to learn it is to find a Jekyll blog you like and take a look at how they do things.
 
 Go forth and start [blogging like a hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html)!
 
