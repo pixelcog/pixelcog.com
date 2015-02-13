@@ -9,7 +9,7 @@ Having recently made the switch from my old PaaS provider to [AWS OpsWorks](http
 
 {{ more }}
 
-> **Update — Feb 12th, 2015**: Since recent updates to AWS OpsWorks broke my original workflow, the tutorial in this post has been altered significantly from the first posting.  If you are looking for the original article, you can find it [here](https://github.com/pixelcog/pixelcog.com/blob/3c3c0029e1bd54b13d43914761ead2a6a1f50fd9/_posts/2014-05-08-virtualizing-aws-opsworks-with-vagrant.md).
+> **Update — Feb 12th, 2015**: Since recent updates to AWS OpsWorks broke my original workflow, the tutorial in this post has been altered significantly from the first posting.  If you are looking for the original article, you can find it [here](https://github.com/pixelcog/pixelcog.com/blob/3c3c0029e1bd54b13d43914761ead2a6a1f50fd9/_posts/2014-05-08-virtualizing-aws-opsworks-with-vagrant.md).  I have also further enhanced this workflow with a custom Packer template documented in my follow-up post "[Simplify OpsWorks Development With Packer]({% post_url 2015-02-13-simplify-opsworks-dev-with-packer %})".
 
 ### Table of Contents
 {:.no_toc}
@@ -385,6 +385,10 @@ Now you can modify whatever you want and have the changes reflected immediately.
 Each of these deployment options are nice for different scenarios. When actively developing your app, saving yourself from reprovisioning each time you want to test it out is quite handy. However the former option gives you an opportunity to debug your deploy recipes if you have any.
 
 The way I've chosen to handle this is to create a custom deploy recipe which does all of the symlinking and bootstrapping for me whenever it is run on a development machine (using a custom attribute passed in through the JSON in the `deploy` hash).
+
+## Custom Vagrant Boxes
+
+To further enhance this workflow, I have created a [Packer template](https://github.com/pixelcog/opsworks-vm) for Vagrant which can be used to pre-load a Vagrant box with the OpsWorks agent and my provisioner script, speeding up the first `vagrant up` process by several minutes and making configuration a lot simpler.  You can find this documented on my follow up post "[Simplify OpsWorks Development With Packer]({% post_url 2015-02-13-simplify-opsworks-dev-with-packer %})".
 
 ## Going Forward / Final Notes
 
