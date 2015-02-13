@@ -14,4 +14,4 @@ excerpt_separator: "{{ more }}"
 safe:     true
 markdown: 'kramdown'
 timezone: 'America/Chicago'
-highlighter: null
+highlighter: 'pygments'
