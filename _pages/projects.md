@@ -13,9 +13,9 @@ Here's a quick glimpse into the projects we're currently involved with.
 
 [![ArkOwl Logo](/img/projects/arkowl.jpg)](http://www.arkowl.com/){: .post-banner style='background-image: url(/img/projects/arkowl.jpg);'}
 
-ArkOwl is a small startup project founded in 2012 for the purpose of helping large online retailers determine the legitimacy of their online orders. Through clever use of social APIs, data mining, and statistical analysis, we provide valuable information to fraud analysts allowing them to mitigate what would be millions in potential losses.
+ArkOwl is a startup I co-founded in 2012 which helps online retailers determine the legitimacy of their online orders. Through clever use of social APIs, data mining, and statistical analysis, we provide valuable information to fraud analysts and allow them to mitigate what would be millions in potential losses.
 
-This project makes extensive use of the [Lithium PHP](http://lithify.me/) framework and [MongoDB](http://www.mongodb.org/), and is hosted with the wonderful PaaS guys at [EngineYard](http://engineyard.com/).
+This project makes extensive use of the [Lithium PHP](http://li3.me/) framework and [MongoDB](http://www.mongodb.org/), and is hosted on Amazon AWS.
 
 
 ## FullMonte IOL
