@@ -2,16 +2,16 @@ name:   'PixelCog Blog'
 url:    'http://pixelcog.com'
 author: 'Mike Greiling'
 
+gems: [jekyll-paginate]
+
 include:  ['_pages']
 
 paginate:      10
 paginate_path: '/blog/page:num/'
 permalink:     '/blog/:year/:title/'
-relative_permalinks: false
 
 excerpt_separator: "{{ more }}"
 
-safe:     true
 markdown: 'kramdown'
 timezone: 'America/Chicago'
-highlighter: 'pygments'
+highlighter: 'rouge'
