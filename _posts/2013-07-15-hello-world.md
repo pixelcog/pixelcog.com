@@ -21,7 +21,7 @@ Maintaining this blog will help me accomplish several things at once:
 - Reflect on and organize my thoughts
 - Engage in the developer community
 - Exercise discipline in writing regularly
-- Publicise myself — *there's only so much a short bio or résumé can tell you about me; writing about my vocation allows me to demonstrate my grasp of the technologies I use.*
+- Publicize myself — *there's only so much a short bio or résumé can tell you about me; writing about my vocation allows me to demonstrate my grasp of the technologies I use.*
 
 I plan to cover a range of topics from software and technology, to productivity hacking, and a little bit of personal philosophy.
 
@@ -33,7 +33,7 @@ A few years back I adopted [David Allen's GTD system](http://en.wikipedia.org/wi
 
 While using this blog as a "mind dump" for ideas and technical tutorials won't profoundly effect my *working memory* in the same way putting my projects and tasks into a task management system would, I think it will allow me to relax my *long term memory* in a similar fashion.
 
-In this profession, I wear a lot of hats and I balance a lot of skillsets. I may use a library like [cURL](http://curl.haxx.se/libcurl/) for a small one-off project, or use [Chef](http://www.opscode.com/chef/) to customize my server environment for a customer, or run into some quirky syntax in a programming language I occasionally use, and then never use that knowledge again until 12 months later. If I document these experiences in writing, I not only have a better chance of retaining my acquired knowledge, I don't really have to remember it at all:
+In this profession, I wear a lot of hats and I balance a lot of skill sets. I may use a library like [cURL](http://curl.haxx.se/libcurl/) for a small one-off project, or use [Chef](http://www.opscode.com/chef/) to customize my server environment for a customer, or run into some quirky syntax in a programming language I occasionally use, and then never use that knowledge again until 12 months later. If I document these experiences in writing, I not only have a better chance of retaining my acquired knowledge, I don't really have to remember it at all:
 
 > "The things that were once in my brain – now Google can find them!"  
 > — [Lorna Jane Mitchell](http://www.lornajane.net/) at [php\[tek\]](http://tek.phparch.com/)
