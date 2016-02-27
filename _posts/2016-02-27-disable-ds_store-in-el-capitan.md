@@ -65,3 +65,5 @@ After your computer has finished rebooting yet again, open up a Terminal and typ
 If all went well you should see: **Your Asepsis installation seems to be OK**.
 
 Congratulations, you now have Asepsis running *with* SIP still turned on.  If you go ahead and create a new folder, open it up in Finder, add some files, and mess with the view options, then check the contents, you'll notice a conspicuous absence of `.DS_Store` shenanigans.
+
+Thanks to everyone in the Asepsis ["El Capitan compatibility" GitHub issue thread](https://github.com/binaryage/asepsis/issues/30) for helping me work this out.
